@@ -1,7 +1,6 @@
 $(function(){
 
 
-
   
   $(".dropdown-btn").hover(
     function() {
