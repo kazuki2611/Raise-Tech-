@@ -1,0 +1,488 @@
+@import "foundation/base";
+// 変数
+@import "foundation/variable.scss";
+
+  // @mixin
+ @import "foundation/mixin";
+  
+  
+@import "foundation/reset";
+  
+ 
+ 
+  
+  .l-header {
+    @include breakpoint(wide) {
+    
+      display: flex;
+      height: 70px;
+      background-color: $background-color;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto;
+      line-height: 1.3;
+      list-style: none;
+      align-items: center;
+    }
+    @include breakpoint(pc) {
+      position: fixed;
+      width: 100%;
+      background-color: $background-color ;
+    }
+    @include breakpoint(tablet) {
+   position: fixed;
+   background-color: $background-color;
+   float: right;
+   width: 100%;
+    z-index: 100;
+    }
+   
+   }
+   .l-header__left {
+   @include breakpoint(wide) {
+    display: flex;
+    margin: 0 0 0 21px;
+    align-items: center;
+   
+    }
+     p {
+       @include breakpoint(wide) {
+        margin-left: 16px;
+        font-size: 14px;
+       }
+       @include breakpoint(pc) {
+         display: none;
+       }
+       span {
+         @include breakpoint(wide) {
+          font-size: 18px;
+         }
+       }
+     }
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+   .p-nav {
+   
+   line-height: 0;
+   align-items: center;
+   }
+   
+   
+   .p-nav__list {
+    
+    @include breakpoint(wide) {
+      position:relative;
+      display:flex;
+      cursor:pointer;
+       
+     
+    }
+   
+    @include breakpoint(pc) {
+      display: none;
+     
+      
+    }
+   }
+    .p-nav-list__item {
+     @include breakpoint(wide){
+      font-size: 16px;
+      display: block;
+      height: 70px;
+      
+      
+      }
+      a {
+        @include breakpoint(wide) {
+          text-decoration: none;
+         //  display: block;
+          padding: 0 15px;
+          align-items: flex-start;
+         //  color: $text-color;
+          line-height: 4;
+         //  height: 70px;
+        }
+        @include breakpoint(pc) {
+         //  display: block;
+        padding: 10px 15px;
+        color: $text-color;
+        line-height: 2;
+        }
+        &:hover {
+          @include breakpoint(wide) {
+            
+            background-color:$hover-color;
+           }
+           @include breakpoint(pc) {
+             background-color: $hover-color;
+           }
+         }
+         
+       }
+     
+    
+      .p-dropdownMenu {
+        @include breakpoint(wide) {
+          
+          display:inline-block;
+          font-weight: 400;
+          position: absolute;
+          display: none;
+          background-color: $hover-color;
+          font-size: 16px;
+        }
+        @include breakpoint(pc) {
+          list-style: none;
+          font-weight: 400;
+          display: none;
+        }
+        a {
+          @include breakpoint(wide) {
+            
+           //  padding: 15px 60px 15px 15px;
+          }
+          @include breakpoint(pc) {
+            display: block;
+            padding:10px 100px 10px 25px;
+          }
+          &:hover {
+            @include breakpoint(wide) {
+              
+              background-color: $background-color;
+              color: $base-color;
+            }
+            @include breakpoint(pc) {
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
+         .button a {
+         
+          display: block;
+          color: #fff;
+          background-color:$base-color ;
+          padding: 0 15px;
+          font-size: 16px;
+          height: 70px;
+          line-height: 4;
+          @include breakpoint(pc) {
+            display: none;
+          }
+          
+         }
+         .c-button__logo {
+          
+           font-size: 18px;
+           color: $background-color;
+           font-weight: 700px;
+         } 
+   
+      
+     
+       
+       
+      .c-button {
+          padding: 24px 37px;
+          background-color:$base-color;
+          display :inline-block;
+          border-radius:4px;
+         
+         
+          @include breakpoint(tablet) {
+            padding: 12px 18px;
+           
+          }
+      }
+      
+      
+       
+      .p-top-head {
+        
+         
+          background-image:url(../image/bg-hero3.png);
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          height: 700px;
+          width: 100%;
+          text-align: center;
+          @include breakpoint (tablet) {
+            background-image: url(../image/bg-hero3.png);
+            background-size: auto 350px;
+            background-position: top;
+            height: 400px;
+            width: 100%;
+            
+          }
+       
+      
+       
+        &__layer1 {
+        
+           
+            background-image: url(../image/bg-hero2.png);
+            height: 100%;
+            width: 100%;
+            background-position: center;
+          @include breakpoint (tablet) {
+            background-image: url(../image/bg-hero2.png);
+            background-size: auto 350px;
+            background-position: top;
+            height: 400px;
+            width: 100%;
+          
+          }
+     
+         
+          
+        }
+        &__layer2 {
+          
+            background-image: url(../image/bg-hero1.png);
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            @include breakpoint (tablet) {
+              background-image: url(../image/bg-hero1.png);
+              background-size: auto 350px;
+              background-position: top;
+              height: 400px;
+              width: 100%;
+            }
+       
+         
+         
+   
+        }
+        &__body {
+         text-align: center;
+         font-size: 18px;
+         max-width: 530px;
+         background-color:$background-color;
+         border-radius: 10px;
+         padding: 43px 40px 19px;
+         margin-top: 80px;
+         display: inline-block;
+       
+      
+     
+      @include breakpoint(tablet) {
+       
+        background-color: $background-color;
+     
+        margin-top: 200px;
+        width: 100%;
+        max-width: 100%;
+       border-radius: 0;
+       font-size: 13px;
+       &_title {
+         width: 100%;
+         padding: 5px;
+       }
+      
+   
+      }
+   
+        }
+        
+       }
+       .c-top-head__title {
+         img {
+           width: 280px;
+       height: auto;
+         }
+         p {
+           margin: 1.3rem 0.5rem;
+           font-size: 16px;
+         }
+         @include breakpoint (tablet) {
+          
+   
+           img {
+             display: none;
+           }
+         }
+       }
+    
+      
+      
+      .p-service {
+       
+        height: 200px;
+        margin-top: 260px;
+        background-color:$text-color;
+        
+       @include breakpoint(tablet) {
+        margin: 0 ;
+        height: 100%;
+       }
+       &__wrapper {
+         display: flex;
+         color: $background-color;
+         justify-content: center;
+         
+         margin:  50px;
+        
+         position: relative;
+        @include breakpoint(tablet) {
+         margin: 0;
+         flex-direction: column;
+         position: relative;
+         z-index: 0;
+        
+        
+         background-color:$text-color;
+         p {
+           br {
+             display: none;
+           }
+         }
+        }
+       }
+     }
+     .c-service__box {
+      margin: -200px 50px;
+     
+      @include breakpoint(tablet) {
+        margin: 50px 0 0 0;
+      }
+     }
+      .fas {
+       color:$text-color;
+       width: 230px;
+       line-height:normal;
+       font-size: 100px;
+       background-color:$background-color;
+       height: 230px;
+       
+       border-radius: 50%;
+       border: solid 6px #000;
+       padding-top: 60px;
+     }
+      @include breakpoint(pc) {
+        .p-hamburger {
+          float: right;
+          width: 50px;
+          height:50px;
+          background-color:$background-color;
+          position: relative;
+          &.is-open {
+            background-color:$base-color;
+          }
+          &.is-open::after {
+            transform: rotate( -45deg );
+            top: 24px;
+            background-color:$background-color;
+          }
+          &.is-open::before {
+              transform:rotate( 45deg );
+              top: 24px;
+              background-color:$background-color;
+            }
+   
+         
+          &::after {
+            content: '';
+            width: 20px;
+            height: 2px;
+            
+            background-color:$base-color;
+            position: absolute;
+            left: calc(50% - (20px / 2 ));
+            display: block;
+            transition: transform 0.2s;
+            top: 15px;
+                }
+   
+          &::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color:$base-color;
+            position: absolute;
+            left: calc(50% - (20px / 2 ));
+            display: block;
+            transition: transform 0.2s;
+            
+            bottom: 15px;
+                }
+            span {
+                  width: 20px;
+                  height: 2px;
+                  font-size: 0;
+                 
+                  position: absolute;
+                  background: $base-color;
+                  background-size: auto 1px;
+                  left:calc(50% - (20px / 2 )) ;
+                  top: 50%;
+                  transition: transform .2s;
+                }
+        }
+        
+      }
+      @include breakpoint(pc) {
+         .c-plus {
+          width: 24px;
+          margin-left: 3px;
+          margin-top: 20px;
+          position: absolute;
+          right: 15px;
+          list-style: none;
+   
+          a {
+            display: block;
+            height: 35px;
+            text-align: center;
+            line-height:0; 
+            position: relative;
+   
+            &::before {
+              display: block;
+          content: "";
+          position: absolute;
+          width: 24px;
+          height: 2px;
+          border-radius: 5px;
+          background:$text-color;
+          background-color:$text-color;
+          transition: .1s;
+          transform: rotate(90deg);
+          -webkit-transform: rotate(90deg);
+            }
+            &::after {
+              display: block;
+              content: "";
+              position: absolute;
+              width: 24px;
+              height: 2px;
+              background-color:$text-color;
+              transition: .1s;
+            }
+            &.on::before {
+              display: none;
+            }
+          }
+        }
+      }
+     
+      .c-item a {
+        color: $text-color;
+        display: block;
+       
+      }
+      .c-button a {
+      
+       font-weight: 700px;
+      } 
+   
+   
+  /*# sourceMappingURL=styles.css.map */

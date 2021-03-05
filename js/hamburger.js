@@ -25,7 +25,7 @@ $('.is-hamburger').on('click',function(){
     
     
    
-    $('.dropdown').slideUp(200);
+    $('.p-nav__list').slideUp(200);
     
     
   } else {
@@ -33,13 +33,13 @@ $('.is-hamburger').on('click',function(){
   
     
     
-    $('.dropdown').slideDown(100);
+    $('.p-nav__list').slideDown(100);
     $(this).addClass('is-open');
    
   }
   
   $(window).resize(function() {
-    $(".dropdown").css('display','');
+    $(".p-nav__list").css('display','');
 });
 });
 
